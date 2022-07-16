@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "WebInformation";
+    Layout = "~/Views/Shared/_AdminMenu.cshtml";
+}
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.bundle.min.js"></script>
+<style>
+    h2 {
+        margin-top: -20px;
+    }
+
+    svg {
+        float: right;
+        border: 2px solid black;
+        margin-right: 20px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+
+    path {
+        fill: black;
+        font-size: 18px;
+    }
+
+    .card-body {
+        width: 100%;
+        padding: inherit;
+        background-color: #aeb6bf;
+        box-shadow: 1px 1px 3px rgb(128 128 128);
+    }
+
+    .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+        transform: scale(.7) !important;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<div class="md-4">
+<div class="accordion" id="myAccordin">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Application Information
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+            <div class="card-body">
+                <label>Application Name:</label><br />
+                <input type="text" name="name" value="" required />
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
