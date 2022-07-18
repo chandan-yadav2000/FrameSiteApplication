@@ -18,5 +18,6 @@ namespace FrameSiteApplication.Controllers.AdminController
         {
             return View();
         }
-    }
+
+        }
 }

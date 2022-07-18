@@ -6,31 +6,22 @@
 <script src="~/Scripts/bootstrap.min.js"></script>
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/bootstrap.bundle.min.js"></script>
-<style>
-    h2 {
-        margin-top: -20px;
-    }
 
-    svg {
-        float: right;
-        border: 2px solid black;
-        margin-right: 20px;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-    }
+<style>
+
 
     path {
         fill: black;
         font-size: 18px;
     }
 
-    .card-body {
-        width: 100%;
+    .accordion-item {
         padding: inherit;
         background-color: #aeb6bf;
         box-shadow: 1px 1px 3px rgb(128 128 128);
+        margin-bottom: 10px;
     }
+
 
     .accordion-button::after {
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
@@ -40,23 +31,142 @@
     .accordion-button:not(.collapsed)::after {
         background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
     }
+
+    .accordion-button {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 18px;
+        color: black;
+        padding-top: 20px;
+    }
+
+    .form-control {
+        border: groove 1px black;
+    }
+
+    textArea {
+        max-width: 60%;
+    }
+
+    #button, #button:focus {
+        margin-top: -30px;
+        float: right;
+        margin-right: 10px;
+        width: 15%;
+        font-size: 18px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .container {
+    margin-bottom:20px;
+    }
+        
 </style>
 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<div class="md-4">
+<h2>Basic Information about website.</h2>
 <div class="accordion" id="myAccordin">
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                Application Information
+            <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapseOne">
+                <b>Application Information</b>
             </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
             <div class="card-body">
+                <label>Applcation Logo:</label>
+                <input type="file" name="name" value="" /><br />
                 <label>Application Name:</label><br />
-                <input type="text" name="name" value="" required />
+                <input type="text" class="form-control" name="name" value="" required />
+                <label>Application Discription:</label>
+                <textarea name="discription" class="form-control" rows="5" id="textArea1"></textarea>
+                <button class="btn btn-info" type="submit" id="button">Submit</button>
+                <button class="btn btn-danger" type="button" id="button">Cancel</button>
+
             </div>
         </div>
     </div>
+
+</div>
+
+<div class="accordion" id="myAccordin2">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapseTwo">
+                <b>Application Footer</b>
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#myAccordion2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <label>Owner Name:</label><br />
+                        <input type="text" name="name" class="form-control" value="" required />
+                        <label>Email Id:</label><br />
+                        <input type="text" name="name" class="form-control" value="" required />
+                        <label>Company Name:</label><br />
+                        <input type="text" name="name" class="form-control" value="" required />
+                    </div>
+                    <div class="col-6">
+                        <label>Contact No:</label><br />
+                        <input type="text" name="name" class="form-control" value="" required />
+                        <label>Address:</label>
+                        <textarea name="discription" class="form-control" rows="5" id="textArea1"></textarea>
+                        <button class="btn btn-info" type="submit" id="button">Submit</button>
+                        <button class="btn btn-danger" type="button" id="button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion" id="myAccordin2">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button type="button" class="accordion-button collapsed" data-toggle="collapse" data-target="#collapseThree">
+                    <b>Design Dashboard</b>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <label>Background Image 1:</label>
+                            <input type="file" name="name" value="" /><br />
+                            <label>Background Image 2:</label>
+                            <input type="file" name="name" value="" /><br />
+
+                            <label>Sample Image 2:</label>
+                            <input type="file" name="name" value="" /><br />
+                        </div>
+                        <div class="col-4">
+                            <label>Background Image 2:</label>
+                            <input type="file" name="name" value="" /><br />
+                            <label>Background Image 5:</label>
+                            <input type="file" name="name" value="" /><br />
+                            <label>Sample Image 3:</label>
+                            <input type="file" name="name" value="" /><br />
+                        </div>
+                        <div class="col-4">
+                            <label>Background Image 3:</label>
+                            <input type="file" name="name" value="" /><br />
+                            <label>Sample Image 1:</label>
+                            <input type="file" name="name" value="" /><br />
+                        </div>
+                    </div>
+                    <button class="btn btn-info" type="submit" id="button">Submit</button>
+                    <button class="btn btn-danger" type="button" id="button">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
