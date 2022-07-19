@@ -1,4 +1,5 @@
-﻿
+﻿@model FrameSiteApplication.Models.BasicInformation.ApplicationName
+
 @{
     ViewBag.Title = "WebInformation";
     Layout = "~/Views/Shared/_AdminMenu.cshtml";
@@ -61,9 +62,8 @@
     }
 
     .container {
-    margin-bottom:20px;
+        margin-bottom: 20px;
     }
-        
 </style>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
@@ -71,6 +71,9 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <h2>Basic Information about website.</h2>
+
+@using (Html.BeginForm())
+{
 <div class="accordion" id="myAccordin">
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
@@ -81,12 +84,12 @@
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
             <div class="card-body">
                 <label>Applcation Logo:</label>
-                <input type="file" name="name" value="" /><br />
+                <input name="applicatinLogo" type="file"  value="" /><br />
                 <label>Application Name:</label><br />
-                <input type="text" class="form-control" name="name" value="" required />
+                <input name="applicationName" type="text" class="form-control"  value="" required />
                 <label>Application Discription:</label>
-                <textarea name="discription" class="form-control" rows="5" id="textArea1"></textarea>
-                <button class="btn btn-info" type="submit" id="button">Submit</button>
+                <textarea name="applicationDiscription"  class="form-control" rows="5" id="textArea1"></textarea>
+                <input type="submit" value="Save" class="btn btn-info" id="button" />
                 <button class="btn btn-danger" type="button" id="button">Cancel</button>
 
             </div>
@@ -94,7 +97,7 @@
     </div>
 
 </div>
-
+}
 <div class="accordion" id="myAccordin2">
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
@@ -170,3 +173,15 @@
 
     </div>
 </div>
+
+
+@{
+    if (@TempData["Msg"] != null)
+    {
+        <script>
+
+            alert('@TempData["msg"]')
+        </script>
+
+        }
+}  
