@@ -1,5 +1,5 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
+
 
 namespace FrameSiteApplication
 {
@@ -19,9 +19,8 @@ namespace FrameSiteApplication
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new Bundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                       "~/Scripts/jquery-3.4.1.js"));
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
