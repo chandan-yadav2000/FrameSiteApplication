@@ -1,28 +1,27 @@
 ﻿using FrameSiteApplication.Context;
 using FrameSiteApplication.Models.BasicInformation;
 using System;
-using System.Drawing;
-using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FrameSiteApplication.Context;
+using FrameSiteApplication.Models.BasicInformation;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FrameSiteApplication.Controllers.AdminController
 {
 
     public class AdminController : Controller
     {
-
-        AppliactionEntity appEnt = new AppliactionEntity();
         // GET: AdminDashboard
         public ActionResult Dashboard()
         {
             return View();
         }
 
-
         public ActionResult WebInformation()
         {
-
             return View();
         }
 
